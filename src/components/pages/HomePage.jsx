@@ -8,18 +8,14 @@ import { FAQ } from '../FAQ'
 export const HomePage = () => {
   
   return (
-     <>
-    <HeroSection/>
-    <div className='container mx-auto'>
-        
-     
-     <About/>
-     <MostFrequentDreams/>
-     <UserReview />
-     <FAQ />
-     
-     
+    <>
+          <HeroSection/>
+      <div className='container mx-auto px-6 lg:px-24 py-16'>
+        <About/>
+        <MostFrequentDreams/>
+        <UserReview />
+        <FAQ />
      </div>
-     </>
+    </>
   )
 }

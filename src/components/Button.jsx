@@ -13,7 +13,7 @@ export const Button = ({ children, variant, classes }) => {
         sizeClasses = 'text-lg px-7 py-3';
         break;
       case 'search':
-        sizeClasses = 'ml-[-10px] px-5 py-2'
+        sizeClasses = 'rounded-l-none px-5 py-2'
         break
         default:
         sizeClasses = 'text-base px-5 py-2'; 

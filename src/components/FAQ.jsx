@@ -25,7 +25,7 @@ export const FAQ = () => {
         </details>
 
 
-        <div class="bg-white py-3 ">
+        {/* <div class="bg-white py-3 ">
           <h3 class="text-xl font-semibold text-gray-800">Why do we dream?</h3>
           <p class="mt-2 text-gray-600">Dreams are a natural part of sleep, and they can serve various psychological functions such as processing emotions, solving problems, and reflecting on experiences.</p>
         </div>
@@ -40,7 +40,7 @@ export const FAQ = () => {
         <div class="bg-white py-3 ">
           <h3 class="text-xl font-semibold text-gray-800">Do dreams have universal meanings?</h3>
           <p class="mt-2 text-gray-600">While some dream symbols may have common interpretations, the meaning of dreams can vary greatly depending on the individual's personal experiences and emotions.</p>
-        </div>
+        </div> */}
 
       </div>
 

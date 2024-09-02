@@ -50,7 +50,7 @@ export const MostFrequentDreams = () => {
         <div>
           {
             posts.map((post, index)=>(
-              <DreamCard key={post.title+index} title={post.title} text={post.text} src={post.src} href={post.href}  />
+              <DreamCard key={post.title+index} title={post.title} text={post.text} featuredImg={post.src} $id="test"  />
             ))
           }
         </div>

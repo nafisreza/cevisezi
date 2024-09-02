@@ -7,7 +7,7 @@ export class Service{
     bucket
 
     constructor(){
-        this.client.setEndpoint(conf.appwriteUrl).setProject(conf.appwriteProjectID)
+        this.client.setEndpoint("https://cloud.appwrite.io/v1").setProject("66c61a5d000d73102232")
         this.databases = new Databases(this.client)
         this.bucket = new Storage(this.client)
     }
@@ -16,8 +16,8 @@ export class Service{
     async createPost({slug, title, content, userID, imageUrl, status}){
         try{
             return await this.databases.createDocument(
-                conf.appwriteDatabaseID,
-                conf.appwrwriteCellectionID, 
+                "66cc9c7700022ecf031b",
+                "66cc9c98001bd1aa9d87", 
                 slug,
                 {title, content, userID, imageUrl, status}
             )
@@ -31,7 +31,7 @@ export class Service{
         try{
             return await this.databases.getDocument(
                 conf.appwriteDatabaseID,
-                conf.appwrwriteCellectionID, 
+                conf.appwriteCollectionID, 
                 slug
             ); 
         }
@@ -44,7 +44,7 @@ export class Service{
         try{
             return await this.databases.listDocuments(
                 conf.appwriteDatabaseID,
-                conf.appwrwriteCellectionID,
+                conf.appwriteCollectionID,
                 [queries] 
             );
 
@@ -58,7 +58,7 @@ export class Service{
         try{
                 await this.databases.deleteDocument(
                 conf.appwriteDatabaseID,
-                conf.appwrwriteCellectionID,
+                conf.appwriteCollectionID,
                 slug
             )
             return true
@@ -72,7 +72,7 @@ export class Service{
         try{
             return await this.databases.updateDocument(
                 conf.appwriteDatabaseID,
-                conf.appwrwriteCellectionID,
+                conf.appwriteCollectionID,
                 slug,
                 {title, content, imageUrl, status}
             );
@@ -115,7 +115,7 @@ export class Service{
     getFilePreview(fileID){
     try{
         return this.storage.getFilePreview(
-            conf.appwriteBucketID, 
+            "66cc9eb1000c6013e3b6", 
             fileID            
         ).href;
     }

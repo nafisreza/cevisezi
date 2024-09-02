@@ -4,7 +4,6 @@ import { About } from '../components/About'
 import { MostFrequentDreams } from '../components/MostFrequentDreams'
 import { UserReview } from '../components/UserReview'
 import { FAQ } from '../components/FAQ'
-import { Counter } from '../components/Counter'
 
 export const HomePage = () => {
   
@@ -16,8 +15,7 @@ export const HomePage = () => {
         <MostFrequentDreams/>
         <UserReview />
         <FAQ />
-        <Counter/>
-     </div>
+      </div>
     </>
   )
 }

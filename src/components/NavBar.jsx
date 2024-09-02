@@ -1,8 +1,13 @@
 import React from 'react'
 import { Button } from './Button'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import LogoutBtn from './LogoutBtn'
 
 export const NavBar = () => {
+
+  const authStatus = useSelector((state)=>state.auth.status)
+
   return (
     <>  
     <div className='flex justify-around items-center my-5 ' >
@@ -19,6 +24,7 @@ export const NavBar = () => {
                 
         </ul>
         
+        {authStatus? <LogoutBtn/> : <p>Login</p>}
         <Button> Get Started  </Button> 
         
     </div>

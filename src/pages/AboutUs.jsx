@@ -1,14 +1,11 @@
 import React from 'react'
-import { Featured } from '../Featured'
+import { Featured } from '../components/Featured'
 
 export const AboutUs = () => {
   return (
-    <div >
+    <>
 
-      
       <Featured title="ABOUT US" url='bg-[url("./public/assets/about-us.png")]' />
-      
-      
 
       <section className='container mx-auto px-6 lg:px-24 py-16 bg-white dark:bg-gray-900'>
         <div className=" px-4 mx-auto pb-10 lg:pb-18 max-w-screen-md">
@@ -43,9 +40,9 @@ export const AboutUs = () => {
           </div>
 
 
-          
+
         </div>
       </section>
-    </div>
+    </>
   )
 }

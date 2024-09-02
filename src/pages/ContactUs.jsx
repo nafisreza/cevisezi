@@ -1,6 +1,6 @@
 import React from 'react'
-import { Featured } from '../Featured'
-import { Button } from '../Button'
+import { Featured } from '../components/Featured'
+import { Button } from '../components/Button'
 
 export const ContactUs = () => {
     return (

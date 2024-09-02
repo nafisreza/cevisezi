@@ -1,12 +1,13 @@
 import React from 'react'
-import { Featured } from '../Featured'
+import { Featured } from '../components/Featured'
+import { MostFrequentDreams } from '../components/MostFrequentDreams'
 
 export const Post = () => {
   return (
     <div>
         <Featured title="POST TITLE" url='bg-[url("./public/assets/post.png")]' />
 
-        <div className='container flex justify-between mx-auto py-6 '>
+        <div className='container flex flex-col justify-between mx-auto py-6 '>
             
             <div className='w-[80%]'>
             <h2 className='text-3xl font-bold py-3'> Title2</h2>
@@ -68,6 +69,8 @@ export const Post = () => {
                 </ul>
             </div>
 
+
+            <MostFrequentDreams/> 
         </div>
         
         

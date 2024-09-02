@@ -6,17 +6,26 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import { AboutUs } from './components/pages/AboutUs.jsx';
+import { AboutUs } from './pages/AboutUs.jsx';
 import Layout from './Layout.jsx';
-import { ContactUs } from './components/pages/ContactUs.jsx';
-import { Blogs } from './components/pages/Blogs.jsx';
-import { Post } from './components/pages/Post.jsx';
+import { ContactUs } from './pages/ContactUs.jsx';
+import { Blogs } from './pages/Blogs.jsx';
+import { Post } from './pages/Post.jsx';
+import { store } from './store/store';
+import { Provider } from 'react-redux';
+import Login from './pages/Login.jsx';
+import AuthLayout from './components/AuthLayout.jsx'
+import SignUp from './pages/SignUp.jsx';
+import AllPosts from './pages/AllPosts.jsx';
+import AddPost from './pages/AddPost.jsx';
+import EditPost from './pages/EditPost.jsx';
+import { HomePage } from './pages/HomePage'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout><App /></Layout>,
-    errorElement: <App />,
+    element: <Layout><HomePage /> </Layout>,
+    errorElement: <Layout><HomePage /></Layout> ,
   },
   {
     path: "/about",
@@ -30,13 +39,34 @@ const router = createBrowserRouter([
     path: "/blogs",
     element: <Layout><Blogs /></Layout>,
   },
-  {path: "/post",
+  {path: "/:post",
     element: <Layout><Post /></Layout>,},
+  {
+    path: "/login",
+    element:<AuthLayout authentication={false}><Login /></AuthLayout>
+  },
+  {
+    path: "/signup",
+    element:<AuthLayout authentication={false}><SignUp/></AuthLayout>
+  },
+  {
+    path: "/all-posts",
+    element:<AuthLayout authentication={true}><AllPosts/></AuthLayout>
+  },
+  {
+    path: "/add-post",
+    element:<AuthLayout authentication={true}><AddPost/></AuthLayout>
+  },
+  {
+    path: "/edit-post/:slug",
+    element:<AuthLayout authentication={true}><EditPost/></AuthLayout>
+  }
 ]);
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-     <RouterProvider router={router} />    
-  </React.StrictMode>,
-)
+  
+  <Provider store={store}>
+      <RouterProvider router={router} />    
+  </Provider>
+  )

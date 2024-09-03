@@ -1,5 +1,5 @@
 
-export const Button = ({ children, variant, classes }) => {
+export const Button = ({ children, variant, classes, type="button" }) => {
     let sizeClasses;
   
     switch(variant) {
@@ -20,7 +20,7 @@ export const Button = ({ children, variant, classes }) => {
     }
   
     return (
-      <button className={`${classes} bg-purple-900 text-white rounded hover:bg-purple-800 transition ease-in-out duration-500 ${sizeClasses} `}>
+      <button type={type} className={`${classes} bg-purple-900 text-white rounded hover:bg-purple-800 transition ease-in-out duration-500 ${sizeClasses} `}>
         {children}
       </button>
     )

@@ -5,8 +5,7 @@ import { useId } from 'react'
 const Select = forwardRef(function Select({label, ref, options}){
 
     const id = useId
-    const a = ["active", "inactive"]
-
+   
     return (
         <div className='w-full'>
             <label htmlFor={id}>{label}</label> 

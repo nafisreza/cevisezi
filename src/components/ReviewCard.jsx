@@ -3,33 +3,33 @@ import React from 'react'
 export const ReviewCard = ({name, date, title, review}) => {
   return (
     <div
-  class="flex flex-col gap-2 dark:text-white max-w-md w-full bg-white dark:bg-neutral-900 p-5 rounded-md mt-8 shadow-md hover:scale-105 hover:duration-150 duration-150">
+  className="flex flex-col gap-2 dark:text-white max-w-md w-full bg-white dark:bg-neutral-900 p-5 rounded-md mt-8 shadow-md hover:scale-105 hover:duration-150 duration-150">
 
-  <div class="flex flex-row justify-between w-full">
-    <div class="flex flex-row justify-between w-full">
-      <div class="bg-gray-200 dark:bg-neutral-700 rounded-md w-20 h-4 animate-pulse">
+  <div className="flex flex-row justify-between w-full">
+    <div className="flex flex-row justify-between w-full">
+      <div className="bg-gray-200 dark:bg-neutral-700 rounded-md w-20 h-4 animate-pulse">
         <p>{name}</p>
       </div>
       <div
-        class="bg-gray-200 dark:bg-neutral-700 rounded-md w-10 animate-pulse"
+        className="bg-gray-200 dark:bg-neutral-700 rounded-md w-10 animate-pulse"
       >
         <p>{date}</p>
       </div>
     </div>
   </div>
-  <div class="flex flex-row justify-between w-full">
+  <div className="flex flex-row justify-between w-full">
     <div
-      class="bg-gray-200 dark:bg-neutral-700 rounded-md w-40 animate-pulse"
+      className="bg-gray-200 dark:bg-neutral-700 rounded-md w-40 animate-pulse"
     >
       <p>{title}</p>
     </div>
 
-    <div class="text-xs">
-      <div class="flex flex-row">
+    <div className="text-xs">
+      <div className="flex flex-row">
         <svg
           fill="currentColor"
           viewBox="0 0 20 20"
-          class="h-4 w-4 text-yellow-400"
+          className="h-4 w-4 text-yellow-400"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -39,7 +39,7 @@ export const ReviewCard = ({name, date, title, review}) => {
         <svg
           fill="currentColor"
           viewBox="0 0 20 20"
-          class="h-4 w-4 text-yellow-400"
+          className="h-4 w-4 text-yellow-400"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -49,7 +49,7 @@ export const ReviewCard = ({name, date, title, review}) => {
         <svg
           fill="currentColor"
           viewBox="0 0 20 20"
-          class="h-4 w-4 text-yellow-400"
+          className="h-4 w-4 text-yellow-400"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -59,7 +59,7 @@ export const ReviewCard = ({name, date, title, review}) => {
         <svg
           fill="currentColor"
           viewBox="0 0 20 20"
-          class="h-4 w-4 text-yellow-400"
+          className="h-4 w-4 text-yellow-400"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -70,7 +70,7 @@ export const ReviewCard = ({name, date, title, review}) => {
         <svg
           fill="currentColor"
           viewBox="0 0 20 20"
-          class="h-4 w-4 text-yellow-200"
+          className="h-4 w-4 text-yellow-200"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -82,7 +82,7 @@ export const ReviewCard = ({name, date, title, review}) => {
   </div>
 
   <div
-    class="bg-gray-200 dark:bg-neutral-700 rounded-md w-full h-20 animate-pulse"
+    className="bg-gray-200 dark:bg-neutral-700 rounded-md w-full h-20 animate-pulse"
   >
     <p>{review}</p>
   </div>

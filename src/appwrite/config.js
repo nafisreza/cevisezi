@@ -7,7 +7,7 @@ export class Service{
     bucket
 
     constructor(){
-        this.client.setEndpoint("https://cloud.appwrite.io/v1").setProject("66c61a5d000d73102232")
+        this.client.setEndpoint(conf.appwriteUrl).setProject(conf.appwriteProjectID)
         this.databases = new Databases(this.client)
         this.bucket = new Storage(this.client)
     }
@@ -16,8 +16,8 @@ export class Service{
     async createPost({slug, title, content, userID, imageUrl, status}){
         try{
             return await this.databases.createDocument(
-                "66cc9c7700022ecf031b",
-                "66cc9c98001bd1aa9d87", 
+                conf.appwriteDatabaseID,
+                conf.appwriteCollectionID, 
                 slug,
                 {title, content, userID, imageUrl, status}
             )
@@ -115,7 +115,7 @@ export class Service{
     getFilePreview(fileID){
     try{
         return this.storage.getFilePreview(
-            "66cc9eb1000c6013e3b6", 
+            conf.appwriteBucketID, 
             fileID            
         ).href;
     }
@@ -126,4 +126,4 @@ export class Service{
 }
 
 const service = new Service()
-export default Service
+export default service

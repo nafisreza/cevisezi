@@ -14,27 +14,27 @@ export const AboutUs = () => {
         </div>
 
         <div className='pt-8 lg:py-16 flex justify-between flex-wrap  '>
-          <div class="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
+          <div className="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
             <h3 className='pb-3 text-center  text-3xl font-semibold text-inherit'>TEXT</h3>
             <p className='text-inherit text-justify font-se'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veniam, eligendi voluptas incidunt ducimus corrupti aliquam laboriosam iusto repellendus suscipit! A, itaque labore distinctio dolorem quibusdam adipisci voluptate maxime ipsa consequatur magni natus deserunt architecto ullam dolor expedita officiis non aliquid mollitia id consequuntur beatae qui nisi debitis reiciendis? Adipisci?</p>
           </div>
-          <div class="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
+          <div className="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
             <h3 className='pb-3 text-center  text-3xl font-semibold text-inherit'>TEXT</h3>
             <p className='text-inherit text-justify font-se'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veniam, eligendi voluptas incidunt ducimus corrupti aliquam laboriosam iusto repellendus suscipit! A, itaque labore distinctio dolorem quibusdam adipisci voluptate maxime ipsa consequatur magni natus deserunt architecto ullam dolor expedita officiis non aliquid mollitia id consequuntur beatae qui nisi debitis reiciendis? Adipisci?</p>
           </div>
-          <div class="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
+          <div className="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
             <h3 className='pb-3 text-center  text-3xl font-semibold text-inherit'>TEXT</h3>
             <p className='text-inherit text-justify font-se'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veniam, eligendi voluptas incidunt ducimus corrupti aliquam laboriosam iusto repellendus suscipit! A, itaque labore distinctio dolorem quibusdam adipisci voluptate maxime ipsa consequatur magni natus deserunt architecto ullam dolor expedita officiis non aliquid mollitia id consequuntur beatae qui nisi debitis reiciendis? Adipisci?</p>
           </div>
-          <div class="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
+          <div className="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
             <h3 className='pb-3 text-center  text-3xl font-semibold text-inherit'>TEXT</h3>
             <p className='text-inherit text-justify font-se'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veniam, eligendi voluptas incidunt ducimus corrupti aliquam laboriosam iusto repellendus suscipit! A, itaque labore distinctio dolorem quibusdam adipisci voluptate maxime ipsa consequatur magni natus deserunt architecto ullam dolor expedita officiis non aliquid mollitia id consequuntur beatae qui nisi debitis reiciendis? Adipisci?</p>
           </div>
-          <div class="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
+          <div className="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
             <h3 className='pb-3 text-center  text-3xl font-semibold text-inherit'>TEXT</h3>
             <p className='text-inherit text-justify font-se'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veniam, eligendi voluptas incidunt ducimus corrupti aliquam laboriosam iusto repellendus suscipit! A, itaque labore distinctio dolorem quibusdam adipisci voluptate maxime ipsa consequatur magni natus deserunt architecto ullam dolor expedita officiis non aliquid mollitia id consequuntur beatae qui nisi debitis reiciendis? Adipisci?</p>
           </div>
-          <div class="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
+          <div className="w-full lg:w-[45%] h-auto  mt-6 p-6 border border-dashed rounded-xl  border-[#321b5c] text-[#321b5c] hover:bg-[#321b5c] hover:text-white">
             <h3 className='pb-3 text-center  text-3xl font-semibold text-inherit'>TEXT</h3>
             <p className='text-inherit text-justify font-se'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veniam, eligendi voluptas incidunt ducimus corrupti aliquam laboriosam iusto repellendus suscipit! A, itaque labore distinctio dolorem quibusdam adipisci voluptate maxime ipsa consequatur magni natus deserunt architecto ullam dolor expedita officiis non aliquid mollitia id consequuntur beatae qui nisi debitis reiciendis? Adipisci?</p>
           </div>

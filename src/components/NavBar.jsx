@@ -11,7 +11,7 @@ export const NavBar = () => {
   return (
     <>  
     <div className='flex justify-around items-center my-5 ' >
-    <Link to="/"><img src="./public/assets/cevisezi-logo.png" alt=""  className='h-[60px]' /></Link> 
+    <Link to="/"><img src="/assets/cevisezi-logo.png" alt=""  className='h-[60px]' /></Link> 
 
         
         <ul className='flex gap-5'>

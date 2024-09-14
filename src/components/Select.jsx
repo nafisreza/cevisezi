@@ -4,7 +4,7 @@ import { useId } from 'react'
 
 const Select = forwardRef(function Select({label, ref, options}){
 
-    const id = useId
+    const id = useId()
    
     return (
         <div className='w-full'>

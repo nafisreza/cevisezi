@@ -4,7 +4,7 @@ import { useId } from 'react'
 
 const Input = forwardRef(function Input({label, type="text", ref, placeholder, ...props}){
 
-    const id = useId
+    const id = useId()
 
     return (
         <div className='w-full'>

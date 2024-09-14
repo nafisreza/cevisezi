@@ -28,9 +28,33 @@ const PostForm = ({ post }) => {
 
     const submit = async (data) => {
         if(post){
-            
+           const file = data.image[0] ? await service.uploadFile(data.image[0]) : null  
+           if(file){
+             service.deleteFile(post.featuredImg)
+           }
+           const dbPost = await service.updatePost(post.$id, {
+            ...data, 
+            featuredImg: file ? file.$id : undefined
+           })
+            if (dbPost){
+                navigate(`/post/${dbPost.$id}`)
+            } 
+        
+        }else{
+            const file = await service.uploadFile(data.image[0])
+            if(file){
+                const fileId = file.$id
+                data.featuredImg = fileId
+                const dbPost = await service.createPost({
+                    ...data,
+                    userID: userData.$id
+                })
+                if (dbPost){
+                    navigate(`/post/${dbPost.$id}`)
+                }   
+            }
         }
-    }
+    }    
 
     const convertSlug = (title) => {
         return title.trim()

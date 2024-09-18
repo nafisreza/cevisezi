@@ -10,8 +10,6 @@ import service from '../appwrite/config'
 import { useEffect } from 'react'
 import { Button } from './Button'
 
-
-
 const PostForm = ({ post }) => {
     const userData = useSelector((state) => state.auth.userData)
 
@@ -20,9 +18,9 @@ const PostForm = ({ post }) => {
     const { register, handleSubmit, watch, control, setValue, getValues } = useForm({
         defaultValues: {
             title: post?.title || "",
+            slug: post?.$id || "",
             content: post?.content || "",
-            slug: post.slug || "",
-            status: post?.status || "",
+            status: post?.status || "active",
         }
     })
 

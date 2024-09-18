@@ -1,5 +1,5 @@
 import React from 'react'
-import {Login as LoginComponent} from '../components/Login'
+import { default as LoginComponent } from '../components/Login'
 
 
 

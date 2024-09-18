@@ -36,7 +36,7 @@ export const Post = () => {
     const deletePost = () => {
         service.deletePost(post.$id).then((status) => {
             if (status) {
-                service.deleteFile(post.featuredImg)
+                service.deleteFile(post.featuredImage)
                 navigate("/")
             }
         })
@@ -44,7 +44,7 @@ export const Post = () => {
 
     return (
         <div>
-            <img src={service.getFilePreview(post.featuredImg)} alt="" />
+            <img src={service.getFilePreview(post.featuredImage)} alt="" />
             {
                 isAuther && (
                     <div>

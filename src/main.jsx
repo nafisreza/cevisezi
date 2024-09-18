@@ -9,7 +9,7 @@ import './index.css'
 import { AboutUs } from './pages/AboutUs.jsx';
 import Layout from './Layout.jsx';
 import { ContactUs } from './pages/ContactUs.jsx';
-import { Blogs } from './pages/Blogs.jsx';
+import Blogs from './pages/Blogs.jsx';
 import { Post } from './pages/Post.jsx';
 import { store } from './store/store';
 import { Provider } from 'react-redux';

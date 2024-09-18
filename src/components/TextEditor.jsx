@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRef } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
+import {Controller } from 'react-hook-form';
 
 
 
@@ -11,7 +12,7 @@ const TextEditor = ({name, control, label, defaultValue=""}) => {
   return (
     <div>
         <label htmlFor="">{label}</label>
-        <Controler 
+        <Controller 
         name={name||"content"} 
         control={control}
         render={({field: {onChange}})=>(

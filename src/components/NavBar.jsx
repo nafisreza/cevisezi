@@ -24,7 +24,7 @@ export const NavBar = () => {
                 
         </ul>
         
-        {authStatus? <LogoutBtn/> : <p>Login</p>}
+        {authStatus? <LogoutBtn/> : <Link to="/login">Login</Link>}
         <Button> Get Started  </Button> 
         
     </div>

@@ -22,6 +22,7 @@ export default function AllPosts() {
 
   return (
     <div>
+      <h1>Here are all the posts:</h1>
       {
         posts.map((post)=>(
           <div key={post.$id}>

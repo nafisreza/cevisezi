@@ -1,5 +1,5 @@
-import conf from "../conf/conf";
-import { Client, Databases, Query, ID , Storage, ImageGravity, ImageFormat} from "appwrite";
+import conf from "../conf/conf.js";
+import { Client, Databases, Query, ID , Storage } from "appwrite";
 
 export class Service{
     client = new Client()
@@ -40,12 +40,12 @@ export class Service{
         }
     }
 
-    async getPosts(queries= Query.equal("status", "active")){
+    async getPosts(queries= [Query.equal("status", "active")]){
         try{
             return await this.databases.listDocuments(
                 conf.appwriteDatabaseID,
                 conf.appwriteCollectionID,
-                [queries] 
+                queries
             );
 
         }

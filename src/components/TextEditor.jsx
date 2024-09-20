@@ -17,6 +17,7 @@ const TextEditor = ({name, control, label, defaultValue=""}) => {
         control={control}
         render={({field: {onChange}})=>(
            <Editor initialValue={defaultValue}
+           apiKey='sxwlcvl31lsy9ighorksd3ir4hmupan5kyw4tuj2aivv2nu2'
            init={{
              height: 500,
              menubar: false,

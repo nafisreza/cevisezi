@@ -88,9 +88,9 @@ export class Service{
 
     async uploadFile(file){
         try{
-            return await this.storage.createFile(
+            return await this.bucket.createFile(
                 conf.appwriteBucketID, 
-                ID.unique, 
+                ID.unique(), 
                 file
             );
         }
@@ -101,7 +101,7 @@ export class Service{
 
     async deleteFile(fileID){
         try{
-            await this.storage.deleteFile(
+            await this.bucket.deleteFile(
                 conf.appwriteBucketID, // bucketId
                 fileID // fileId
             );
@@ -114,7 +114,7 @@ export class Service{
 
     getFilePreview(fileID){
     try{
-        return this.storage.getFilePreview(
+        return this.bucket.getFilePreview(
             conf.appwriteBucketID, 
             fileID            
         ).href;

@@ -6,6 +6,7 @@ import service from '../appwrite/config'
 import { useEffect } from 'react'
 import PostForm from '../components/PostForm'
 import { DreamCard } from '../components/DreamCard'
+import { Link } from 'react-router-dom'
 
 
 export default function Blogs() {
@@ -30,12 +31,13 @@ export default function Blogs() {
   
 
   return (
-    <div>
+    <div className='container mx-auto py-8'>
       {
         posts.map((post)=>(
-          <div key={post.$id}>
-            <DreamCard {...post}/>
-          </div>
+          <Link to={`/post/${post?.$id}`} key={post?.$id} className='w-full p-4'>
+            <h1 className='font-bold text-[16px]'>{post?.title}</h1>
+            <img src={post?.imageUrl} alt={post?.title} className='h-32' />
+          </Link>
         ))
       }
 

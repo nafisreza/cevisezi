@@ -112,17 +112,12 @@ export class Service{
     }
 }
 
-    getFilePreview(fileID){
-    try{
-        return this.bucket.getFilePreview(
-            conf.appwriteBucketID, 
-            fileID            
-        ).href;
-    }
-    catch(error){
-        console.log(error)
-    }
-    }
+getFilePreview(fileID) {
+    return this.bucket.getFilePreview(
+        conf.appwriteBucketID,
+        fileID
+    );
+}
 }
 
 const service = new Service()

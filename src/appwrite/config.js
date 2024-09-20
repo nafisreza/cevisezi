@@ -27,16 +27,15 @@ export class Service{
         }
     }
 
-    async getPost({slug}){
-        try{
+    async getPost(slug) {
+        try {
             return await this.databases.getDocument(
                 conf.appwriteDatabaseID,
-                conf.appwriteCollectionID, 
+                conf.appwriteCollectionID,
                 slug
-            ); 
-        }
-        catch(error){
-            console.log(error)
+            );
+        } catch (error) {
+            console.log(error);
         }
     }
 

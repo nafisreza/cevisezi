@@ -12,7 +12,7 @@ import service from '../appwrite/config'
 
 
 export const Post = () => {
-    const [post, setPost] = useState(null)
+    const [post, setPost] = useState({})
     const navigate = useNavigate()
     const { slug } = useParams()
     const userData = useSelector((state) => state.auth.userData)
@@ -20,23 +20,18 @@ export const Post = () => {
 
     useEffect(() => {
         if (slug) {
+            console.log(slug)
             service.getPost(slug).then((post) => {
-                if (post) {
-                    setPost(post)
-                } else {
-                    navigate("/")
-                }
-            })
-        } else {
-            navigate("/")
-        }
-
-    }, [slug, navigate])
+                if (post) setPost(post);
+                else navigate("/");
+            });
+        } else navigate("/");
+    }, [slug, navigate]);
 
     const deletePost = () => {
         service.deletePost(post.$id).then((status) => {
             if (status) {
-                service.deleteFile(post.featuredImage)
+                service.deleteFile(post?.imgUrl)
                 navigate("/")
             }
         })
@@ -44,21 +39,21 @@ export const Post = () => {
 
     return (
         <div>
-            <img src={service.getFilePreview(post.featuredImage)} alt="" />
-            {
-                isAuther && (
-                    <div>
-                        <Link to={`/edit-post/${post.$id}`}>Edit</Link>
-                        <button onClick={deletePost}>Delete</button>
-                    </div>
-                )
-            }
+            {post?.imgUrl && (
+                <img src={service.getFilePreview(post.imgUrl)} alt="Post Image" />
+            )}
+            {isAuther && (
+                <div className='flex gap-4 justify-end'>
+                    <Link to={`/edit-post/${post.$id}`} className='bg-blue-500 px-5 py-2'>Edit</Link>
+                    <button onClick={deletePost} className='bg-red-500 px-5 py-2'>Delete</button>
+                </div>
+            )}
             <div>
-                <h1>{post.title}</h1>
-                <p>{post.content}</p>
+                <h1>{post?.title}</h1>
+                <img src={post?.imageUrl} alt={post?.title} />
+                <p>{post?.content}</p>
             </div>
-
         </div>
-
     )
+    
 }

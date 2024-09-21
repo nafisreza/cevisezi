@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 
 export const HeroSection = () => {
   return (
-    <div className='flex flex-col justify-center items-center w-full h-screen bg-[url("./assets/hero-image.png")]   bg-cover bg-center text-white' >  
+    <div className='flex flex-col justify-center items-center w-full h-screen bg-[url("./hero-image.png")]   bg-cover bg-center text-white' >  
     <h1 className='text-7xl md:text-8xl font-semibold '>CEVISEZI.RO</h1>
     <p className='text-2xl pb-12 '>Interpretare online de vise</p>
     <img src="" alt="" />

@@ -29,7 +29,7 @@ export default function EditPost() {
 
   return (
     <div>
-      <PostForm post={post}/>
+     {post && <PostForm post={post} />}
 
     </div>
   )

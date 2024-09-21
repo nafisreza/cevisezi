@@ -6,6 +6,7 @@ import { UserReview } from "../components/UserReview";
 import { FAQ } from "../components/FAQ";
 import { useSelector } from "react-redux";
 
+
 export const HomePage = () => {
   const authStatus = useSelector(state=>state.auth.status)
   console.log(authStatus)

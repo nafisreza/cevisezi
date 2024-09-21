@@ -4,6 +4,7 @@ import authService from "./appwrite/auth"
 import { login, logout } from './store/authSlice'
 import { Outlet } from 'react-router-dom'
 
+
 function App() {
 
   const [loading, setLoading] = useState(true)
@@ -23,6 +24,7 @@ function App() {
   
   return (
     <div>
+      
       <Outlet/>
 
     </div>

@@ -76,7 +76,8 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: (
-      <AuthLayout authentication={false}>
+      // stupid update - make it private said Nafis
+      <AuthLayout authentication={true}>  
         <SignUp />
       </AuthLayout>
     ),
@@ -114,3 +115,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </PersistGate>
   </Provider>
 );
+
+export default router;

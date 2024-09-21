@@ -24,9 +24,12 @@ export const NavBar = () => {
                 
         </ul>
         
+     <div className='flex gap-4'>
+     {authStatus? <Link to='/add-post'  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"> Add Post</Link> : ''}
         {authStatus? <LogoutBtn/> : <Link to="/login">Login</Link>}
-        <Button> Get Started  </Button> 
-        
+     
+     </div>
+     <Button> Get Started  </Button> 
     </div>
     
     </>

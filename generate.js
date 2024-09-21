@@ -3,17 +3,13 @@ import path from 'path';
 import { Client, Databases, Query } from 'appwrite';
 
 // Replace with Bogdan's domain
-const DOMAIN = 'https://yourwebsite.com';
+const DOMAIN = 'https://cevisezi.ro';
 
 const staticRoutes = [
   '/',
   '/about',
   '/contact',
   '/blogs',
-  '/login',
-  '/signup',
-  '/all-posts',
-  '/add-post'
 ];
 
 const client = new Client()

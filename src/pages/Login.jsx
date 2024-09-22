@@ -10,9 +10,8 @@ export default function Login() {
   console.log(authStatus)
 
   return (
-    <div>
+    <div className='flex items-center justify-center h-screen'>
       <LoginComponent/>
-
     </div>
   )
 }

@@ -31,7 +31,7 @@ const Login = () => {
         <div className='w-full flex flex-col items-center'>
             <h1 className='text-2xl font-bold mb-4'>Login</h1>
             {error && <p className="text-red-500 mb-4">{error}</p>}
-            <form onSubmit={handleSubmit(login)} className='w-full max-w-md'>
+            <form onSubmit={handleSubmit(login)} className='w-full max-w-md mb-64'>
                 <Input
                     label="Email"
                     type="email"

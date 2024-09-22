@@ -33,7 +33,7 @@ const SignUp = () => {
 
 
     return (
-        <div className='w-full flex justify-center items-center'>
+        <div className='w-full flex justify-center items-center mb-64'>
             <h1>SignUp</h1>
 
             <form onSubmit={handleSubmit(createUser)} >

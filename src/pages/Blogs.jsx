@@ -41,7 +41,7 @@ export default function Blogs() {
             <Link
               to={`/post/${post?.$id}`}
               key={post?.$id}
-              className={`flex flex-col w-full h-[284px] border  rounded shadow-lg hover:scale-105  transition-transform duration-1000  ${index === 0 ? 'md:col-span-2 md:row-span-2 md:h-[600px]' : ''
+              className={`flex flex-col w-full h-[284px] border rounded shadow-lg hover:scale-105  transition-transform duration-1000  ${index === 0 ? 'md:col-span-2 md:row-span-2 md:h-[600px]' : ''
                 }`}
             >
               
@@ -49,7 +49,7 @@ export default function Blogs() {
                 <img
                   src={post?.imageUrl}
                   alt={post?.title}
-                  className={`w-full h-full overflow-hidden object-cover  ${index === 0 ? 'h-full' : 'h-32'}`}
+                  className={`w-full h-full rounded-t overflow-hidden object-cover  ${index === 0 ? 'h-full' : 'h-32'}`}
                 />
               
 

@@ -14,7 +14,7 @@ export const NavBar = () => {
           <img src="/assets/cevisezi-logo.png" alt="" className="h-[60px]" />
         </Link>
 
-        <ul className="flex gap-5">
+        <ul className="flex gap-5 font-semibold">
           <li>
             <Link to="/">Home</Link>
           </li>

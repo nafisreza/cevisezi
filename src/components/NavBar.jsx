@@ -35,7 +35,9 @@ export const NavBar = () => {
           </li>
         </ul>
 
-        <div className="flex gap-4">
+
+        <div>
+        <div >
           {authStatus ? (
             <Link
               to="/add-post"
@@ -45,11 +47,12 @@ export const NavBar = () => {
               Add Post
             </Link>
           ) : (
-            ""
+            null
           )}
-          {authStatus ? <LogoutBtn /> : <Link to="/login">Login</Link>}
+          {authStatus ? <LogoutBtn /> : null}
         </div>
         <Button> Get Started </Button>
+      </div>
       </div>
     </>
   );

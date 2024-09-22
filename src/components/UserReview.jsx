@@ -3,10 +3,10 @@ import { ReviewCard } from './ReviewCard'
 
 export const UserReview = () => {
   return (
-    <div className='py-7'>
+    <div className='py-7 '>
     <h1 className='text-5xl font-semibold uppercase py-3'>User review</h1>
 
-    <div className='flex  justify-between flex-wrap'>
+    <div className='flex  justify-around flex-wrap gap-2'>
 
       <ReviewCard name="John" title="Good title" date="12.07.24" review="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque excepturi laborum harum necessitatibus, magni corrupti earum culpa ."/>
 

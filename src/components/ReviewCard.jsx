@@ -2,16 +2,17 @@ import React from 'react'
 
 export const ReviewCard = ({name, date, title, review}) => {
   return (
+    
     <div
-  className="flex flex-col gap-2 dark:text-white max-w-md w-full bg-white dark:bg-neutral-900 p-5 rounded-md mt-8 shadow-md hover:scale-105 hover:duration-150 duration-150">
+  className="flex flex-col gap-2 border max-w-md w-full bg-white  p-5 rounded-md mt-8 shadow-lg hover:scale-105  transition-transform duration-1000">
 
-  <div className="flex flex-row justify-between w-full">
+  <div className="flex flex-row justify-between  w-full">
     <div className="flex flex-row justify-between w-full">
-      <div className="bg-gray-200 dark:bg-neutral-700 rounded-md w-20 h-4 animate-pulse">
+      <div className="bg-gray-200  rounded-md w-20 h-4 ">
         <p>{name}</p>
       </div>
       <div
-        className="bg-gray-200 dark:bg-neutral-700 rounded-md w-10 animate-pulse"
+        className="bg-gray-200  rounded-md w-10 "
       >
         <p>{date}</p>
       </div>
@@ -19,7 +20,7 @@ export const ReviewCard = ({name, date, title, review}) => {
   </div>
   <div className="flex flex-row justify-between w-full">
     <div
-      className="bg-gray-200 dark:bg-neutral-700 rounded-md w-40 animate-pulse"
+      className="bg-gray-200 rounded-md w-40 "
     >
       <p>{title}</p>
     </div>
@@ -82,7 +83,7 @@ export const ReviewCard = ({name, date, title, review}) => {
   </div>
 
   <div
-    className="bg-gray-200 dark:bg-neutral-700 rounded-md w-full h-20 animate-pulse"
+    className="bg-gray-200  rounded-md w-full h-20 "
   >
     <p>{review}</p>
   </div>

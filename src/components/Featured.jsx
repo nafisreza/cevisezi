@@ -14,3 +14,4 @@ export const Featured = ({url, title}) => {
     </>
   )
 }
+

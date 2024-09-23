@@ -51,7 +51,7 @@ export const Post = () => {
         </div>
       )}
       <div className="flex flex-col gap-5 my-10">
-        <Featured url={post?.imageUrl} title={post?.title}/>
+        <Featured url={`bg-[url("./${post?.imageUrl}")]`} title={post?.title}/>
         <h1 className="font-semibold text-5xl">{post?.title}</h1>
         <img src={post?.imageUrl} alt={post?.title} className="w-[720px]" />
         {post?.content && parse(post.content)}
@@ -59,3 +59,5 @@ export const Post = () => {
     </div>
   );
 };
+
+'bg-[url("./about-us.png")]'

@@ -50,19 +50,15 @@ export const Post = () => {
           </button>
         </div>
       )}
-      <Featured url={`bg-[url(${post?.imageUrl})]`} title={post?.title} />
+      {post?.imageUrl && (
+      <Featured url={post?.imageUrl}   title={post?.title} />
+    )}
       <section className="container mx-auto px-6 lg:px-24 py-16 bg-white">
+      
         <div className="flex flex-col gap-5 my-10">
-          
-          <h1 className="font-semibold text-5xl">{post?.title}</h1>
-          <img src={post?.imageUrl} alt={post?.title} className="w-[720px]" />
           {post?.content && parse(post.content)}
         </div>
       </section>
     </div>
   );
 };
-
-//// url={`bg-[url("${post?.imageUrl"})]`}
-// "bg-[url(https://cloud.appwrite.io/v1/storage/buckets/66cc9eb1000c6013e3b6/files/66f06f3500239a553f05/preview?project=66c61a5d000d73102232)]"
-// "bg-[url(https://cloud.appwrite.io/v1/storage/buckets/66cc9eb1000c6013e3b6/files/66f19a6a001e23808151/view?project=66c61a5d000d73102232&project=66c61a5d000d73102232)]"

@@ -1,14 +1,12 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import service from '../appwrite/config'
-import { useEffect } from 'react'
-import { DreamCard } from '../components/DreamCard'
 import { Link } from 'react-router-dom'
 import { Featured } from '../components/Featured'
-import parse from "html-react-parser";
 
 export default function Blogs() {
   const [posts, setPosts] = useState([])
+  const [currentPage, setCurrentPage] = useState(1)
+  const [postsPerPage] = useState(12)
 
   useEffect(() => {
     service.getPosts([]).then((posts) => {
@@ -18,7 +16,15 @@ export default function Blogs() {
     })
   }, [])
 
-  if (posts.length == 0) {
+  // Get current posts for the current page
+  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfFirstPost = indexOfLastPost - postsPerPage
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber)
+
+  if (posts.length === 0) {
     return (
       <div>
         <h1>No dreams for you!</h1>
@@ -26,14 +32,16 @@ export default function Blogs() {
     )
   }
 
+  // Calculate total number of pages
+  const totalPages = Math.ceil(posts.length / postsPerPage)
+
   return (
     <>
       <Featured title="TOATE INTERPRETARILE" url='bg-[url("./blogs.png")]' />
 
       <section className="container mx-auto px-6 lg:px-24 py-16 bg-white">
-        {/* Grid for first 3 posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-          {posts.map((post, index) => (
+          {currentPosts.map((post, index) => (
             <Link
               to={`/post/${post?.$id}`}
               key={post?.$id}
@@ -53,19 +61,18 @@ export default function Blogs() {
           ))}
         </div>
 
-        {/* Grid for remaining posts, one per row
-        <div className="grid grid-cols-1 mt-7">
-          {posts.slice(3).map((post, index) => (
-            <DreamCard 
-              key={post?.title + (index + 3)} 
-              title={post?.title} 
-              text={post?.content && parse(post.content)} 
-              featuredImg={post?.imageUrl} 
-              className={"w-full"} 
-              $id={post?.$id} 
-            />
+        {/* Pagination Controls */}
+        <div className="flex justify-center mt-8">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index}
+              onClick={() => paginate(index + 1)}
+              className={`w-12 py-2 mx-1 border rounded ${currentPage === index + 1 ? 'bg-purple-950 text-white' : 'bg-gray-200'}`}
+            >
+              {index + 1}
+            </button>
           ))}
-        </div> */}
+        </div>
       </section>
     </>
   )

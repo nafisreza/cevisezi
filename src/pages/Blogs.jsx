@@ -1,10 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
 import service from '../appwrite/config'
 import { useEffect } from 'react'
-import PostForm from '../components/PostForm'
 import { DreamCard } from '../components/DreamCard'
 import { Link } from 'react-router-dom'
 import { Featured } from '../components/Featured'
@@ -36,7 +33,7 @@ export default function Blogs() {
       <section className="container mx-auto px-6 lg:px-24 py-16 bg-white">
         {/* Grid for first 3 posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-          {posts.slice(0, 3).map((post, index) => (
+          {posts.map((post, index) => (
             <Link
               to={`/post/${post?.$id}`}
               key={post?.$id}
@@ -56,7 +53,7 @@ export default function Blogs() {
           ))}
         </div>
 
-        {/* Grid for remaining posts, one per row */}
+        {/* Grid for remaining posts, one per row
         <div className="grid grid-cols-1 mt-7">
           {posts.slice(3).map((post, index) => (
             <DreamCard 
@@ -68,7 +65,7 @@ export default function Blogs() {
               $id={post?.$id} 
             />
           ))}
-        </div>
+        </div> */}
       </section>
     </>
   )

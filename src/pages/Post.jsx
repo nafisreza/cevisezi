@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import service from "../appwrite/config";
 import parse from "html-react-parser";
 import { Featured } from "../components/Featured";
+import { DreamCard } from "../components/DreamCard";
 
 
 export const Post = () => {
@@ -35,6 +36,24 @@ export const Post = () => {
     });
   };
 
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    service.getPosts([]).then((posts) => {
+      if (posts) {
+        setPosts(posts.documents)
+      }
+    })
+  }, [])
+
+  if (posts.length == 0) {
+    return (
+      <div>
+        <h1>No dreams for you!</h1>
+      </div>
+    )
+  }
+
   return (
     <div>
       {post?.imgUrl && (
@@ -53,12 +72,34 @@ export const Post = () => {
       {post?.imageUrl && (
       <Featured url={post?.imageUrl}   title={post?.title} />
     )}
-      <section className="container mx-auto px-6 lg:px-24 py-16 bg-white">
-      
-        <div className="flex flex-col gap-5 my-10">
-          {post?.content && parse(post.content)}
-        </div>
-      </section>
+      <section className="container mx-auto px-6 lg:px-24 py-16 bg-white flex flex-col lg:flex-row gap-10">
+  {/* Main content area */}
+  <div className="flex-1">
+    <div className="flex flex-col gap-5 my-10">
+      {post?.content && parse(post.content)}
+    </div>
+  </div>
+  
+  {/* Sidebar */}
+  <aside className="w-full lg:w-1/3 bg-gray-100 p-6">
+    <div className="flex flex-col gap-4">
+      {/* Sidebar content goes here */}
+      <h2 className="text-xl font-semibold">Sidebar Title</h2>
+      <p>Some additional information or links can go here.</p>
+      {posts.slice(0, 3).map((post, index) => (
+            <DreamCard 
+              key={post?.title + (index + 3)} 
+              title={post?.title} 
+              text={post?.content && parse(post.content)} 
+              featuredImg={post?.imageUrl} 
+              className={"w-full"} 
+              $id={post?.$id} 
+            />
+          ))}
+    </div>
+  </aside>
+</section>
+
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { Button } from '../components/Button'
 export const ContactUs = () => {
     return (
         <div>
-            <Featured title="CONTACT US" url='bg-[url("./contact-us.png")]' />
+            <Featured title="CONTACT US" url="./contact-us.png" />
 
             <section className='container mx-auto px-6 lg:px-24 py-16 bg-white'>
                 <div className=" px-4 mx-auto pb-10 lg:pb-18 max-w-screen-md">

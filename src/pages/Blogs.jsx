@@ -37,7 +37,7 @@ export default function Blogs() {
 
   return (
     <>
-      <Featured title="TOATE INTERPRETARILE" url='bg-[url("./blogs.png")]' />
+      <Featured title="TOATE INTERPRETARILE" url="./blogs.png" />
 
       <section className="container mx-auto px-6 lg:px-24 py-16 bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">

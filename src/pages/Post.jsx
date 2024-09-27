@@ -54,6 +54,10 @@ export const Post = () => {
     )
   }
 
+  function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
   return (
     <div>
       {post?.imgUrl && (
@@ -70,37 +74,45 @@ export const Post = () => {
         </div>
       )}
       {post?.imageUrl && (
-      <Featured url={post?.imageUrl}   title={post?.title} />
-    )}
+        <Featured url={post?.imageUrl} title={post?.title} />
+      )}
       <section className="container mx-auto px-6 lg:px-24 py-16 bg-white flex flex-col lg:flex-row gap-10">
-  {/* Main content area */}
-  
-  <div className="flex-1">
-  <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">{post?.title && parse(post.title)}</h1>
-    <div className="flex flex-col gap-5 my-10">
-      {post?.content && parse(post.content)}
-    </div>
-  </div>
-  
-  {/* Sidebar */}
-  <aside className="w-full lg:w-1/3 bg-gray-100 p-6">
-    <div className="flex flex-col gap-4">
-      {/* Sidebar content goes here */}
-      <h2 className="text-xl font-semibold">Sidebar Title</h2>
-      <p>Some additional information or links can go here.</p>
-      {posts.slice(0, 3).map((post, index) => (
-            <DreamCard 
-              key={post?.title + (index + 3)} 
-              title={post?.title} 
-              text={post?.content && parse(post.content)} 
-              featuredImg={post?.imageUrl} 
-              className={"w-full"} 
-              $id={post?.$id} 
-            />
-          ))}
-    </div>
-  </aside>
-</section>
+        {/* Main content area */}
+
+        <div className="flex-1">
+          <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">{post?.title && parse(post.title)}</h1>
+          <div className="flex flex-col gap-5 my-10">
+            {post?.content && parse(post.content)}
+          </div>
+        </div>
+
+        {/* Sidebar */}
+        <aside className="w-full lg:w-1/3 bg-gray-100 p-6">
+          <div className="flex flex-col gap-4">
+            {/* Sidebar content goes here */}
+            <h2 className="text-xl font-semibold">Sidebar Title</h2>
+            <p>Some additional information or links can go here.</p>
+            {shuffleArray(posts).slice(0, 3).map((post) => (
+              <Link
+                to={`/post/${post?.$id}`}
+                key={post?.$id}
+                className="flex flex-col w-full h-[284px] border rounded shadow-lg hover:scale-105 transition-transform duration-1000"
+              >
+                <img
+                  src={post?.imageUrl}
+                  alt={post?.title}
+                  className="w-full h-full rounded-t overflow-hidden object-cover"
+                />
+                <div className='flex flex-col text-center justify-around h-[70px]'>
+                  <h1 className="font-bold text-[16px]">
+                    {post?.title}
+                  </h1>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </aside>
+      </section>
 
     </div>
   );

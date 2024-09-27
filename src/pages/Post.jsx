@@ -74,7 +74,9 @@ export const Post = () => {
     )}
       <section className="container mx-auto px-6 lg:px-24 py-16 bg-white flex flex-col lg:flex-row gap-10">
   {/* Main content area */}
+  
   <div className="flex-1">
+  <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">{post?.title && parse(post.title)}</h1>
     <div className="flex flex-col gap-5 my-10">
       {post?.content && parse(post.content)}
     </div>

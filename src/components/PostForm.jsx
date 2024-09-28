@@ -16,7 +16,7 @@ const PostForm = ({ post }) => {
     const { register, handleSubmit, watch, control, setValue, getValues } = useForm({
         defaultValues: {
             title: post?.title || "",
-            slug: post?.$id || "",
+            slug: post?.slug || "",
             content: post?.content || "",
             status: post?.status || "active",
         }
@@ -25,39 +25,36 @@ const PostForm = ({ post }) => {
     const submit = async (data) => {
         setError("");
         try {
-            if (post) {
-                let imageUrl = post.imageUrl;
-                if (data.image[0]) {
-                    const uploadedFile = await service.uploadFile(data.image[0]);
-                    if (uploadedFile) {
-                        imageUrl = service.getFilePreview(uploadedFile.$id);
-                        if (post.imageUrl) {
-                            const oldFileId = post.imageUrl.split('/').pop().split('?')[0];
-                            await service.deleteFile(oldFileId);
-                        }
+            let imageUrl = post?.imageUrl;
+            if (data.image[0]) {
+                const uploadedFile = await service.uploadFile(data.image[0]);
+                if (uploadedFile) {
+                    imageUrl = service.getFilePreview(uploadedFile.$id);
+                    if (post?.imageUrl) {
+                        const oldFileId = post.imageUrl.split('/').pop().split('?')[0];
+                        await service.deleteFile(oldFileId);
                     }
                 }
+            }
+    
+            if (post) {
+                // Update existing post
                 const dbPost = await service.updatePost(post.$id, {
                     ...data,
                     imageUrl,
                 });
                 if (dbPost) {
-                    navigate(`/post/${dbPost.$id}`);
+                    navigate(`/post/${dbPost.slug}`);
                 }
             } else {
-                const file = data.image[0];
-                if (!file) throw new Error("Featured image is required");
-                const uploadedFile = await service.uploadFile(file);
-                if (uploadedFile) {
-                    const imageUrl = service.getFilePreview(uploadedFile.$id);
-                    const dbPost = await service.createPost({
-                        ...data,
-                        imageUrl,
-                        userID: userData.$id,
-                    });
-                    if (dbPost) {
-                        navigate(`/post/${dbPost.$id}`);
-                    }
+                // Create new post
+                const dbPost = await service.createPost({
+                    ...data,
+                    imageUrl,
+                    userID: userData.$id,
+                });
+                if (dbPost) {
+                    navigate(`/post/${dbPost.slug}`);
                 }
             }
         } catch (error) {

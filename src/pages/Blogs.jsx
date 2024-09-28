@@ -43,7 +43,7 @@ export default function Blogs() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {currentPosts.map((post, index) => (
             <Link
-              to={`/post/${post?.$id}`}
+              to={`/post/${post?.slug}`}
               key={post?.$id}
               className={`flex flex-col w-full h-[284px] border rounded shadow-lg hover:scale-105 transition-transform duration-1000 ${index === 0 ? 'md:col-span-2 md:row-span-2 md:h-[600px]' : ''}`}
             >

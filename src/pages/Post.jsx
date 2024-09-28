@@ -65,7 +65,7 @@ export const Post = () => {
       )}
       {isAuther && (
         <div className="flex gap-4 justify-end">
-          <Link to={`/edit-post/${post.$id}`} className="bg-blue-500 px-5 py-2">
+          <Link to={`/edit-post/${post.slug}`} className="bg-blue-500 px-5 py-2">
             Edit
           </Link>
           <button onClick={deletePost} className="bg-red-500 px-5 py-2">

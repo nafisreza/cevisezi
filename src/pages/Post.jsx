@@ -27,13 +27,25 @@ export const Post = () => {
     } else navigate("/");
   }, [slug, navigate]);
 
-  const deletePost = () => {
-    service.deletePost(post.$id).then((status) => {
-      if (status) {
-        service.deleteFile(post?.imgUrl);
+  const extractFileId = (imageUrl) => {
+    const urlParts = imageUrl.split('/');
+    const fileIdIndex = urlParts.findIndex(part => part === 'files') + 1;
+    return urlParts[fileIdIndex];
+  };
+  const deletePost = async () => {
+    try {
+      const fileId = await extractFileId(post?.imageUrl);
+      await service.deleteFile(fileId);
+      console.log(fileId)
+      const deleteStatus = await service.deletePost(post.$id);
+      if (deleteStatus) {
         navigate("/");
+      } else {
+        console.error("Failed to delete post");
       }
-    });
+    } catch (error) {
+      console.error("Error deleting post or associated file:", error);
+    }
   };
 
   const [posts, setPosts] = useState([])

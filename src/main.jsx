@@ -18,6 +18,7 @@ import EditPost from "./pages/EditPost.jsx";
 import { HomePage } from "./pages/HomePage";
 import { PersistGate } from 'redux-persist/integration/react'
 import { store, persistor } from "./store/store";
+import SearchResults from "./pages/SearchResults.jsx";
 
 const router = createBrowserRouter([
   {
@@ -104,6 +105,14 @@ const router = createBrowserRouter([
       <AuthLayout authentication={true}>
         <EditPost />
       </AuthLayout>
+    ),
+  },
+  {
+    path: "/search",
+    element: (
+      <Layout>
+        <SearchResults />
+      </Layout>
     ),
   },
 ]);

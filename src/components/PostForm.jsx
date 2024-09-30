@@ -7,6 +7,7 @@ import Input from './Input';
 import Select from './Select';
 import TextEditor from './TextEditor';
 import { Button } from './Button';
+import extractFileId from '../utils/extractFileId';
 
 const PostForm = ({ post }) => {
     const userData = useSelector((state) => state.auth.userData);
@@ -31,8 +32,8 @@ const PostForm = ({ post }) => {
                 if (uploadedFile) {
                     imageUrl = service.getFilePreview(uploadedFile.$id);
                     if (post?.imageUrl) {
-                        const oldFileId = post.imageUrl.split('/').pop().split('?')[0];
-                        await service.deleteFile(oldFileId);
+                        const fileId = await extractFileId(post?.imageUrl);
+                        await service.deleteFile(fileId);
                     }
                 }
             }

@@ -8,7 +8,7 @@ import service from "../appwrite/config";
 import parse from "html-react-parser";
 import { Featured } from "../components/Featured";
 import { DreamCard } from "../components/DreamCard";
-
+import extractFileId from "../utils/extractFileId";
 
 export const Post = () => {
   const [post, setPost] = useState({});
@@ -27,11 +27,6 @@ export const Post = () => {
     } else navigate("/");
   }, [slug, navigate]);
 
-  const extractFileId = (imageUrl) => {
-    const urlParts = imageUrl.split('/');
-    const fileIdIndex = urlParts.findIndex(part => part === 'files') + 1;
-    return urlParts[fileIdIndex];
-  };
   const deletePost = async () => {
     try {
       const fileId = await extractFileId(post?.imageUrl);

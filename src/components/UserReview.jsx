@@ -8,7 +8,7 @@ export const UserReview = () => {
 
     <div className='flex  justify-around flex-wrap gap-2'>
 
-      <ReviewCard name="Adina" title="Interpretări precise și relevante" date="12.07.24" review="Am folosit aceast site pentru a intlege cateva dintre visele mele recente, iar interpretările au fost surprinzator de precise"/>
+      <ReviewCard name="Adina" title="Interpretari precise si relevante" date="12.07.24" review="Am folosit acest site pentru a intelege cateva dintre visele mele recente, iar interpretările au fost surprinzator de precise"/>
 
       <ReviewCard name="Andrei" title="Un plus pentru utilizatori" date="22.08.24" review="Un lucru care mi-a placut foarte mult la aceasta pagina este optiunea de a trimite vise pentru interpretari personalizate"/>
 

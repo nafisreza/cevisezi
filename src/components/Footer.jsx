@@ -11,12 +11,21 @@ export const Footer = () => {
 
         <div className='w-full md:max-w-1/3'>
         <h3 className='text-xl font-bold py-3'>Scurtaturi</h3>
-        <p></p>
+        <p className='pb-3'> <a href="/toate-interpretarile">Toate interpretarile</a></p>
+        <p className='pb-3'> <a href="/">Home</a></p>
+        <p className='pb-3'> <a href="/about">Despre</a></p>
+        <p className='pb-3'> <a href="/contact">Contact</a></p>
+        <p className='pb-3'> <a href="/">Chat</a></p>
+        
         </div>
 
         <div className='w-full md:max-w-1/3'>
         <h3 className='text-xl font-bold py-3'>Informatii</h3>
-          <p>E-mail: contact@cevisezi.ro</p>
+
+          <p className='pb-3'>E-mail: <a href="mailto:contact@cevisezi.ro">contact@cevisezi.ro</a></p>
+          
+          <p className='pb-3'><a href="https://cevisezi.ro/utilizare-cookie">Politica de cookies</a></p>
+          <p className='pb-3'><a href="https://cevisezi.ro/utilizare-cookie">Politica de confidentialiate</a></p>
         </div>
       </div>
       <hr />

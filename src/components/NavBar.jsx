@@ -22,10 +22,10 @@ export const NavBar = () => {
             <Link to="/">Chat</Link>
           </li>
           <li>
-            <Link to="/blogs">Toate interpretarile</Link>
+            <Link to="/toate-interpretarile">Toate interpretarile</Link>
           </li>
           <li>
-            <Link to="/about">Despre</Link>
+            <Link to="/despre">Despre</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>

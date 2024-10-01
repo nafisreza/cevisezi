@@ -19,6 +19,8 @@ import { HomePage } from "./pages/HomePage";
 import { PersistGate } from 'redux-persist/integration/react'
 import { store, persistor } from "./store/store";
 import SearchResults from "./pages/SearchResults.jsx";
+import { CookiesPolicy } from "./pages/CookiesPolicy.jsx";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +37,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/about",
+    path: "/despre",
     element: (
       <Layout>
         <AboutUs />
@@ -51,7 +53,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/blogs",
+    path: "/toate-interpretarile",
     element: (
       <Layout>
         <Blogs />
@@ -112,6 +114,22 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <SearchResults />
+      </Layout>
+    ),
+  },
+  {
+    path: "/utilizare-cookie",
+    element: (
+      <Layout>
+        <CookiesPolicy />
+      </Layout>
+    ),
+  },
+  {
+    path: "/politica-de-confidentialitate",
+    element: (
+      <Layout>
+        <PrivacyPolicy />
       </Layout>
     ),
   },

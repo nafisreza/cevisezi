@@ -1,59 +1,46 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { DreamCard } from './DreamCard'
+import service from '../appwrite/config';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 
 export const MostFrequentDreams = () => {
+  const [posts, setPosts] = useState([]);
+
+  function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
   
-  const posts =[
-    {
-      title: "Title",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ea ad! Nulla iusto pariatur, tempore alias assumenda totam expedita culpa a molestiae atque velit fuga blanditiis et saepe ducimus laboriosam.",
-      src: "https://cevisezi.ro/cevisezi-default-image.webp",
-      href: "#"
-    }, 
-    {
-      title: "Title",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ea ad! Nulla iusto pariatur, tempore alias assumenda totam expedita culpa a molestiae atque velit fuga blanditiis et saepe ducimus laboriosam.",
-      src: "https://cevisezi.ro/cevisezi-default-image.webp",
-      href: "#"
-    },
-    {
-      title: "Title",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ea ad! Nulla iusto pariatur, tempore alias assumenda totam expedita culpa a molestiae atque velit fuga blanditiis et saepe ducimus laboriosam.",
-      src: "https://cevisezi.ro/cevisezi-default-image.webp",
-      href: "#"
-    },
-    {
-      title: "Title",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ea ad! Nulla iusto pariatur, tempore alias assumenda totam expedita culpa a molestiae atque velit fuga blanditiis et saepe ducimus laboriosam.",
-      src: "https://cevisezi.ro/cevisezi-default-image.webp",
-      href: "#"
-    },
-    {
-      title: "Title",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ea ad! Nulla iusto pariatur, tempore alias assumenda totam expedita culpa a molestiae atque velit fuga blanditiis et saepe ducimus laboriosam.",
-      src: "https://cevisezi.ro/cevisezi-default-image.webp",
-      href: "#"
-    },
-    {
-      title: "Title",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, ea ad! Nulla iusto pariatur, tempore alias assumenda totam expedita culpa a molestiae atque velit fuga blanditiis et saepe ducimus laboriosam.",
-      src: "https://cevisezi.ro/cevisezi-default-image.webp",
-      href: "#"
-    },
-    
-  ]
+  
+
+
+  useEffect(() => {
+    service.getPosts([]).then((posts) => {
+      if (posts) {
+        setPosts(posts.documents)
+      }
+    })
+  }, [])
   
   return (
     <div className='py-7 '>
-        <h1 className='text-5xl font-semibold uppercase py-3 mb-7'>Most frequent dreams</h1>
+        <h1 className='text-5xl font-semibold uppercase py-3 mb-7'>Cele mai frecvente visuri</h1>
 
-        <div>
-          {
-            posts.map((post, index)=>(
-              <DreamCard key={post.title+index} title={post.title} text={post.text} featuredImg={post.src} $id="test"  />
-            ))
-          }
-        </div>
+        {
+          posts && (<div>
+            {shuffleArray(posts).slice(0, 6).map((post) => (
+              <Link
+                to={`/post/${post?.slug}`}
+                key={post?.$id}
+                // className="flex flex-col w-full h-[284px] border rounded shadow-lg hover:scale-105 transition-transform duration-1000"
+              >
+              <DreamCard post={post}  />
+              </Link>
+            ))}
+
+        </div>)
+        }
 
         
 

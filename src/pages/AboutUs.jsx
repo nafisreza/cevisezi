@@ -5,12 +5,12 @@ export const AboutUs = () => {
   return (
     <>
 
-      <Featured title="ABOUT US" url="./assets/about-us.png"/>
+      <Featured title="DESPRE" url="./assets/about-us.png"/>
 
       <section className='container mx-auto px-6 lg:px-24 py-16 bg-white'>
         <div className=" px-4 mx-auto pb-10 lg:pb-18 max-w-screen-md">
-          <h2 className=" text-5xl pb-6 tracking-tight font-extrabold text-center text-gray-900 ">About Us</h2>
-          <p className=" font-light text-center text-gray-500  sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+          <h2 className=" text-5xl pb-6 tracking-tight font-extrabold text-center text-gray-900 ">DESPRE NOI</h2>
+          <p className=" font-light text-center text-gray-500  sm:text-xl">Pentru noi, CeVisezi.ro este o calatorie de descoperire alaturi de fiecare vizitator, explorand lumea bogata și plina de mister a viselor. Ne bucuram de oportunitatea de a oferi claritate, de a aduce confort si de a te ajuta sa te conectezi cu subconstientul tau prin limbajul fascinant al viselor.</p>
         </div>
 
         <div className='pt-8 lg:py-16 flex justify-between flex-wrap  '>

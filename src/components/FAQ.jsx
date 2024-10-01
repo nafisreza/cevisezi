@@ -10,7 +10,7 @@ export const FAQ = () => {
         <details className="bg-white  ">
           <summary className="mt-2 flex cursor-pointer justify-between items-center">
             <h3 className="text-xl font-semibold text-gray-800">
-              What does dream interpretation mean?
+            Pot visele sa aiba semnificatii diferite pentru fiecare persoana?
             </h3>
             <svg
               data-accordion-icon
@@ -30,9 +30,7 @@ export const FAQ = () => {
             </svg>
           </summary>
           <p className="mt-2 text-gray-600">
-            Dream interpretation is the process of assigning meaning to dreams.
-            It aims to understand the symbols and themes in dreams to provide
-            insights into one's thoughts and feelings.
+          Da, semnificatiile viselor pot varia de la o persoana la alta, in functie de experientele, cultura si emotiile fiecarui individ. Desi unele simboluri pot avea interpretari generale, ele trebuie adaptate contextului personal al celui care viseaza.
           </p>
         </details>
       </div>
@@ -42,7 +40,7 @@ export const FAQ = () => {
         <details className="bg-white  ">
           <summary className="mt-2 flex cursor-pointer justify-between items-center">
             <h3 className=" text-xl font-semibold text-gray-800">
-              What does dream interpretation mean?
+            De ce nu imi amintesc visele?
             </h3>
             <svg
               data-accordion-icon
@@ -62,9 +60,7 @@ export const FAQ = () => {
             </svg>
           </summary>
           <p className="mt-2 text-gray-600">
-            Dream interpretation is the process of assigning meaning to dreams.
-            It aims to understand the symbols and themes in dreams to provide
-            insights into one's thoughts and feelings.
+          Este normal sa nu iti amintesti toate visele. Unele persoane isi amintesc mai multe vise decat altele din cauza ciclurilor de somn, stresului sau altor factori. Tinerea unui jurnal de vise si incercarea de a le scrie imediat dupa trezire poate ajuta la imbunatatirea memoriei viselor.
           </p>
 
         </details>
@@ -75,7 +71,7 @@ export const FAQ = () => {
         <details className="bg-white  ">
           <summary className="mt-2 flex cursor-pointer justify-between items-center">
             <h3 className="text-xl font-semibold text-gray-800">
-              What does dream interpretation mean?
+             Pot visele sa prezica viitorul?
             </h3>
             <svg
               data-accordion-icon
@@ -95,9 +91,7 @@ export const FAQ = () => {
             </svg>
           </summary>
           <p className="mt-2 text-gray-600">
-            Dream interpretation is the process of assigning meaning to dreams.
-            It aims to understand the symbols and themes in dreams to provide
-            insights into one's thoughts and feelings.
+          Nu exista dovezi stiintifice care sa sustina faptul ca visele pot prezice viitorul. Cu toate acestea, unele persoane considera ca visele lor le oferă intuitii sau ghidare subconstienta cu privire la evenimentele viitoare.
           </p>
         </details>
       </div> 

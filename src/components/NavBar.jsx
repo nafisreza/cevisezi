@@ -16,19 +16,19 @@ export const NavBar = () => {
 
         <ul className="flex gap-5 font-semibold">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Acasa</Link>
           </li>
           <li>
             <Link to="/">Chat</Link>
           </li>
           <li>
-            <Link to="/blogs">Blogs</Link>
+            <Link to="/blogs">Toate interpretarile</Link>
           </li>
           <li>
-            <Link to="/about">About us</Link>
+            <Link to="/about">Despre</Link>
           </li>
           <li>
-            <Link to="/contact">Contact us</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
 
@@ -48,7 +48,9 @@ export const NavBar = () => {
           )}
           {authStatus ? <LogoutBtn /> : null}
         </div>
-        <Button> Get Started </Button>
+        <Link to="/blogs">
+        <Button> Interpreteaza </Button>
+        </Link>
       </div>
       </div>
     </>

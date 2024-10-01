@@ -5,18 +5,18 @@ export const Footer = () => {
     <div className=' bg-[#321b5c] text-white'>
       <div className='container mx-auto px-6 lg:px-24  flex flex-col md:flex-row md:justify-between gap-12 py-9'>
         <div className='w-full md:max-w-1/3 text-justify'>
-          <h3 className='text-xl font-bold py-3 '>About us</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus distinctio quam atque. Praesentium ea aut aliquam corrupti possimus quaerat temporibus saepe accusamus atque earum eos a, quo reiciendis accusantium deserunt?</p>
+          <h3 className='text-xl font-bold py-3 '>Despre noi</h3>
+          <p>Pentru noi, CeVisezi.ro este o calatorie de descoperire alaturi de fiecare vizitator, explorand lumea bogata și plina de mister a viselor. Ne bucuram de oportunitatea de a oferi claritate, de a aduce confort si de a te ajuta sa te conectezi cu subconstientul tau prin limbajul fascinant al viselor.</p>
         </div>
 
         <div className='w-full md:max-w-1/3'>
-        <h3 className='text-xl font-bold py-3'>Links</h3>
+        <h3 className='text-xl font-bold py-3'>Scurtaturi</h3>
         <p></p>
         </div>
 
         <div className='w-full md:max-w-1/3'>
-        <h3 className='text-xl font-bold py-3'>Information</h3>
-          <p>Email: contact@cevisezi.ro</p>
+        <h3 className='text-xl font-bold py-3'>Informatii</h3>
+          <p>E-mail: contact@cevisezi.ro</p>
         </div>
       </div>
       <hr />

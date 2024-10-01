@@ -8,11 +8,11 @@ export const ReviewCard = ({name, date, title, review}) => {
 
   <div className="flex flex-row justify-between  w-full">
     <div className="flex flex-row justify-between w-full">
-      <div className="bg-gray-200  rounded-md w-20 h-4 ">
+      <div className="bg-gray-200  rounded-md w-20 px-2">
         <p>{name}</p>
       </div>
       <div
-        className="bg-gray-200  rounded-md w-10 "
+        className="bg-gray-200 rounded-md w-20 pl-4"
       >
         <p>{date}</p>
       </div>
@@ -20,7 +20,7 @@ export const ReviewCard = ({name, date, title, review}) => {
   </div>
   <div className="flex flex-row justify-between w-full">
     <div
-      className="bg-gray-200 rounded-md w-40 "
+      className="bg-gray-200 rounded-md px-2"
     >
       <p>{title}</p>
     </div>
@@ -71,7 +71,7 @@ export const ReviewCard = ({name, date, title, review}) => {
         <svg
           fill="currentColor"
           viewBox="0 0 20 20"
-          className="h-4 w-4 text-yellow-200"
+          className="h-4 w-4 text-yellow-400"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -83,7 +83,7 @@ export const ReviewCard = ({name, date, title, review}) => {
   </div>
 
   <div
-    className="bg-gray-200  rounded-md w-full h-20 "
+    className="bg-gray-200  rounded-md w-full h-20 px-2"
   >
     <p>{review}</p>
   </div>

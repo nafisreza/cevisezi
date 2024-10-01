@@ -101,13 +101,14 @@ export const Post = () => {
             <p>Some additional information or links can go here.</p>
             {shuffleArray(posts).slice(0, 3).map((post) => (
               <Link
-                to={`/post/${post?.$id}`}
+                to={`/post/${post?.slug}`}
                 key={post?.$id}
                 className="flex flex-col w-full h-[284px] border rounded shadow-lg hover:scale-105 transition-transform duration-1000"
               >
                 <img
                   src={post?.imageUrl}
                   alt={post?.title}
+                  loading="lazy"
                   className="w-full h-full rounded-t overflow-hidden object-cover"
                 />
                 <div className='flex flex-col text-center justify-around h-[70px]'>

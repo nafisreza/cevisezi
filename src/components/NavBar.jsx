@@ -48,7 +48,7 @@ export const NavBar = () => {
           )}
           {authStatus ? <LogoutBtn /> : null}
         </div>
-        <Link to="/blogs">
+        <Link to="/toate-interpretarile">
         <Button> Interpreteaza </Button>
         </Link>
       </div>

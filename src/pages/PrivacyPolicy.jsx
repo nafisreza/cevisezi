@@ -7,19 +7,19 @@ export const PrivacyPolicy = () => {
         <div>
             <Featured title="POLITICA DE CONFIDENTIALITATE" url="./assets/contact-us.png" />
 
-            <section className='container mx-auto px-6 lg:px-24 py-16 bg-white'>
+            <section className='container flex flex-col gap-3 mx-auto px-6 lg:px-24 py-16 bg-white '>
                 <div className=" px-4 mx-auto pb-10 lg:pb-18 max-w-screen-md">
-                    <h2 className=" text-5xl pb-6 tracking-tight font-extrabold text-center text-gray-900 ">Politica de Confidentialitate</h2>
+                    <h2  className=" text-5xl pb-6 tracking-tight font-extrabold text-center text-gray-900 ">Politica de Confidentialitate</h2>
                     <p className=" font-light text-center text-gray-500 sm:text-xl">Pentru orice nelamurire ne poti scrie completand formularul de mai jos. Cu ce te putem ajuta azi?</p>
                 </div>
 
-                <p>Versiune valabila incepand cu 01.01.2024</p>
+                <p className='uppercase font-semibold text-purple-950'>Versiune valabila incepand cu 01.01.2024</p>
 <p>Aceasta Politica de Confidentialitate descrie politicile si procedurile noastre privind colectarea, utilizarea si dezvaluirea informatiilor tale atunci cand utilizezi Serviciul si iti informeaza despre drepturile tale privind confidentialitatea si modul in care legea te protejeaza.</p>
 <p>Folosim datele tale personale pentru a furniza si imbunatati Serviciul. Prin utilizarea Serviciului, esti de acord cu colectarea si utilizarea informatiilor in conformitate cu aceasta Politica de Confidentialitate. Aceasta Politica de Confidentialitate a fost creata cu ajutorul <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">Generatorului de Politici de Confidentialitate</a>.</p>
-<h2>Interpretare si Definitii</h2>
-<h3>Interpretare</h3>
+<h2 className='font-semibold text-3xl pt-7 uppercase'> 1. Interpretare si Definitii</h2>
+<h3 className='font-semibold text-2xl' >Interpretare</h3>
 <p>Cuvintele ale caror initiale sunt majuscule au semnificatii definite in urmatoarele conditii. Definitiile urmatoare vor avea acelasi sens indiferent daca apar la singular sau la plural.</p>
-<h3>Definitii</h3>
+<h3 className='font-semibold text-2xl'>Definitii</h3>
 <p>Pentru scopurile acestei Politici de Confidentialitate:</p>
 <ul>
 <li>
@@ -59,8 +59,8 @@ export const PrivacyPolicy = () => {
 <p><strong>Tu</strong> inseamna persoana care acceseaza sau utilizeaza Serviciul, sau compania sau alta entitate legala in numele careia acea persoana acceseaza sau utilizeaza Serviciul, dupa caz.</p>
 </li>
 </ul>
-<h2>Colectarea si Utilizarea Datele Tale Personale</h2>
-<h3>Tipuri de Date Colectate</h3>
+<h2 className='font-semibold text-3xl pt-7 uppercase'>2. Colectarea si Utilizarea Datele Tale Personale</h2>
+<h3 className='font-semibold text-2xl'>Tipuri de Date Colectate</h3>
 <h4>Date Personale</h4>
 <p>In timpul utilizarii Serviciului nostru, putem sa te rugam sa ne furnizezi anumite informatii personal identificabile care pot fi utilizate pentru a te contacta sau identifica. Informatiile personal identificabile pot include, dar nu se limiteaza la:</p>
 <ul>
@@ -108,7 +108,7 @@ export const PrivacyPolicy = () => {
 </li>
 </ul>
 <p>Pentru mai multe informatii despre cookie-urile pe care le utilizam si optiunile tale referitoare la cookie-uri, te rugam sa vizitezi Politica noastra de Cookie-uri sau sectiunea de Cookie-uri a Politicii noastre de Confidentialitate.</p>
-<h3>Utilizarea Datelor Tale Personale</h3>
+<h3 className='font-semibold text-2xl'>Utilizarea Datelor Tale Personale</h3>
 <p>Compania poate utiliza Datele Personale in urmatoarele scopuri:</p>
 <ul>
 <li>
@@ -145,19 +145,19 @@ export const PrivacyPolicy = () => {
 <li><p><strong>Cu alti utilizatori:</strong> atunci cand partajezi informatii personale sau interactionezi in zonele publice cu alti utilizatori, aceste informatii pot fi vizualizate de toti utilizatorii si pot fi distribuite public.</p></li>
 <li><p><strong>Cu consimtamantul tau</strong>: Putem dezvalui informatiile tale personale in scopuri diferite cu consimtamantul tau.</p></li>
 </ul>
-<h3>Pastrarea Datelor Tale Personale</h3>
+<h3 className='font-semibold text-2xl'>Pastrarea Datelor Tale Personale</h3>
 <p>Compania va pastra Datele Tale Personale doar pentru perioada necesara scopurilor stabilite in aceasta Politica de Confidentialitate. Vom pastra si utiliza Datele Tale Personale in masura necesara pentru a respecta obligatiile noastre legale (de exemplu, daca suntem obligati sa pastram datele tale pentru a respecta legile aplicabile), a solutiona disputele si a aplica acordurile si politicile noastre legale.</p>
 <p>Compania va pastra, de asemenea, Datele de Utilizare in scopuri de analiza interna. Datele de Utilizare sunt, in general, pastrate pentru o perioada mai scurta de timp, cu exceptia cazului in care aceste date sunt utilizate pentru consolidarea securitatii sau pentru imbunatatirea functionalitatii Serviciului nostru, sau suntem obligati sa pastram aceste date pentru perioade mai lungi din punct de vedere legal.</p>
-<h3>Transferul datelor tale personale</h3>
+<h3 className='font-semibold text-2xl'>Transferul datelor tale personale</h3>
 <p>Informatiile tale, inclusiv datele personale, sunt procesate in birourile de operare ale Companiei si in orice alt loc in care partile implicate in procesare sunt localizate. Acest lucru inseamna ca aceste informatii pot fi transferate - si mentinute - pe calculatoare aflate in afara statului tau, provinciei, tarii sau altor jurisdictii guvernamentale in care legile privind protectia datelor pot diferi de cele din jurisdictia ta.</p>
 <p>Consimtamantul tau la aceasta Politica de Confidentialitate, urmat de furnizarea acestor informatii, reprezinta acordul tau cu privire la acest transfer.</p>
 <p>Compania va lua toate masurile rezonabile necesare pentru a se asigura ca datele tale sunt tratate in siguranta si conform acestei Politici de Confidentialitate, iar niciun transfer al datelor tale personale nu va avea loc catre o organizatie sau tara daca nu exista controale adecvate, inclusiv securitatea datelor tale si a altor informatii personale.</p>
-<h3>Stergerea datelor tale personale</h3>
+<h3 className='font-semibold text-2xl'>Stergerea datelor tale personale</h3>
 <p>Ai dreptul sa stergi sau sa soliciti ca noi sa te ajutam in stergerea datelor personale pe care le-am colectat despre tine.</p>
 <p>Serviciul nostru iti poate oferi posibilitatea de a sterge anumite informatii despre tine din cadrul Serviciului.</p>
 <p>Poti actualiza, modifica sau sterge informatiile tale in orice moment conectandu-te la contul tau, daca ai unul, si vizitand sectiunea de setari a contului care iti permite sa gestionezi informatiile tale personale. De asemenea, ne poti contacta pentru a solicita accesul, corectarea sau stergerea oricaror informatii personale pe care le-ai furnizat.</p>
 <p>Te rugam sa retii, totusi, ca putem fi obligati sa pastram anumite informatii atunci cand avem o obligatie legala sau o baza legala pentru a face acest lucru.</p>
-<h3>Divulgarea datelor tale personale</h3>
+<h3 className='font-semibold text-2xl'>Divulgarea datelor tale personale</h3>
 <h4>Tranzactii de afaceri</h4>
 <p>Daca Compania este implicata intr-o fuziune, achizitie sau vanzare de active, datele tale personale pot fi transferate. Vom furniza o notificare inainte ca datele tale personale sa fie transferate si sa devina supuse unei Politici de Confidentialitate diferite.</p>
 <h4>Aplicarea legii</h4>
@@ -171,19 +171,19 @@ export const PrivacyPolicy = () => {
 <li><p>A proteja siguranta personala a Utilizatorilor Serviciului sau a publicului</p></li>
 <li><p>A se apara impotriva raspunderii legale</p></li>
 </ul>
-<h3>Securitatea datelor tale personale</h3>
+<h3 className='font-semibold text-2xl'>Securitatea datelor tale personale</h3>
 <p>Securitatea datelor tale personale este importanta pentru noi, dar aminteste-ti ca niciun mod de transmitere prin internet sau metoda de stocare electronica nu este 100% sigur. Desi ne straduim sa folosim mijloace comercial acceptabile pentru a proteja datele tale personale, nu putem garanta securitatea absoluta a acestora.</p>
-<h2>Confidentialitatea copiilor</h2>
+<h2 className='font-semibold text-3xl pt-7 uppercase'> 3. Confidentialitatea copiilor</h2>
 <p>Serviciul nostru nu se adreseaza niciunei persoane sub varsta de 13 ani. Noi nu colectam in mod constient informatii de identificare personala de la nimeni cu varsta sub 13 ani. Daca esti parinte sau tutore si stii ca copilul tau ne-a furnizat date personale, te rugam sa ne contactezi. Daca aflam ca am colectat date personale de la oricine cu varsta sub 13 ani fara verificarea consimtamantului parental, vom lua masuri pentru a sterge acele informatii de pe serverele noastre.</p>
 <p>Daca trebuie sa ne bazam pe consimtamant ca baza legala pentru prelucrarea informatiilor tale si tara ta solicita consimtamantul de la un parinte, putem solicita consimtamantul parintelui tau inainte de a colecta si utiliza acele informatii.</p>
-<h2>Legaturi catre alte site-uri web</h2>
+<h2 className='font-semibold text-3xl pt-7 uppercase'>4. Legaturi catre alte site-uri web</h2>
 <p>Serviciul nostru poate contine legaturi catre alte site-uri web care nu sunt operate de noi. Daca dai clic pe o legatura catre o terta parte, vei fi directionat catre site-ul acelei terte parti. Te sfatuim sa revezi Politica de Confidentialitate a fiecarui site pe care il vizitezi.</p>
 <p>Noi nu avem control asupra continutului, politicilor de confidentialitate sau practicilor niciunui site sau serviciu al unei terte parti.</p>
-<h2>Modificari ale acestei Politici de Confidentialitate</h2>
+<h2 className='font-semibold text-3xl pt-7 uppercase'>5. Modificari ale acestei Politici de Confidentialitate</h2>
 <p>Putem actualiza Politica noastra de Confidentialitate din cand in cand. Te vom notifica cu privire la orice modificare prin postarea noii Politici de Confidentialitate pe aceasta pagina.</p>
 <p>Te vom informa si printr-un e-mail si/sau printr-o notificare prominenta pe Serviciul nostru, inainte ca schimbarea sa devina efectiva, si vom actualiza data "Ultima actualizare" in partea de sus a acestei Politici de Confidentialitate.</p>
 <p>Se recomanda sa revizuiesti periodic aceasta Politica de Confidentialitate pentru orice modificari. Modificarile aduse acestei Politici de Confidentialitate sunt efective atunci cand sunt postate pe aceasta pagina.</p>
-<h2>Contacteaza-ne</h2>
+<h2 className='font-semibold text-3xl pt-7 uppercase'>6. Contacteaza-ne</h2>
 <p>Daca ai intrebari despre aceasta Politica de Confidentialitate, poti sa ne contactezi prin e-mail: contact@cevisezi.ro</p>
 
             </section>

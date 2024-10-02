@@ -20,8 +20,8 @@ export const Footer = () => {
 
           <p className='pb-3'>E-mail: <a href="mailto:contact@cevisezi.ro">contact@cevisezi.ro</a></p>
           
-          <p className='pb-3'><a href="https://cevisezi.ro/utilizare-cookie">Politica de cookies</a></p>
-          <p className='pb-3'><a href="https://cevisezi.ro/politica-de-confidentialitate">Politica de confidentialiate</a></p>
+          <p className='pb-3'><a href="/utilizare-cookie">Politica de cookies</a></p>
+          <p className='pb-3'><a href="/politica-de-confidentialitate">Politica de confidentialiate</a></p>
         </div>
 
         <div className='w-full md:max-w-1/3 text-justify'>

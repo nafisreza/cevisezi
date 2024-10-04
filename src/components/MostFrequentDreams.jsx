@@ -31,7 +31,7 @@ export const MostFrequentDreams = () => {
           posts && (<div>
             {shuffleArray(posts).slice(0, 6).map((post) => (
               <Link
-                to={`/post/${post?.slug}`}
+                to={`/interpretare-vise/${post?.slug}`}
                 key={post?.$id}
                 // className="flex flex-col w-full h-[284px] border rounded shadow-lg hover:scale-105 transition-transform duration-1000"
               >

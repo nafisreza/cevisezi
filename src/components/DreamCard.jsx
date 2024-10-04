@@ -25,7 +25,7 @@ export const DreamCard = ({ post }) => {
   }, [post?.imageUrl]);
 
   return (
-    <Link to={`/post/${post.slug}`}>
+    <Link to={`/interpretare-vise/${post.slug}`}>
       <div className="group flex flex-col md:flex-row border rounded shadow-lg md:h-[250px] my-3 hover:scale-105 transition-transform duration-1000" >
         {isLoading ? (
           <div className="w-full h-[250px] bg-gray-200 flex justify-center items-center">

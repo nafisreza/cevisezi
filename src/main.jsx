@@ -61,7 +61,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/post/:slug",
+    path: "/interpretare-vise/:slug",
     element: (
       <Layout>
         <Post />

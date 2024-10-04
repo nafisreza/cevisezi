@@ -45,7 +45,7 @@ const PostForm = ({ post }) => {
                     imageUrl,
                 });
                 if (dbPost) {
-                    navigate(`/post/${dbPost.slug}`);
+                    navigate(`/interpretare-vise/${dbPost.slug}`);
                 }
             } else {
                 // Create new post
@@ -55,7 +55,7 @@ const PostForm = ({ post }) => {
                     userID: userData.$id,
                 });
                 if (dbPost) {
-                    navigate(`/post/${dbPost.slug}`);
+                    navigate(`/interpretare-vise/${dbPost.slug}`);
                 }
             }
         } catch (error) {

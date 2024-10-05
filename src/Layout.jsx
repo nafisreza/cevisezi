@@ -9,14 +9,14 @@ const Layout = ({children}) => {
     <>
         <CookieConsent
   location="bottom"
-  buttonText="Sure man!!"
+  buttonText="Accept"
   cookieName="myAwesomeCookieName2"
-  style={{ background: "#2B373B" }}
+  style={{ background: "#2e1065" }}
   buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
   expires={150}
 >
-  This website uses cookies to enhance the user experience.{" "}
-  <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span>
+Pentru a va oferi rezultate personalizate folosim module cookie. Află in sectiunea <a href="/utilizare-cookie">Politica de Cookies</a> mai multe despre cookie-uri, inclusiv despre posibilitatea retragerii acordului.{" "}
+  <span style={{ fontSize: "10px" }}></span>
 </CookieConsent>
         
           <NavBar/>

@@ -83,7 +83,7 @@ export const ReviewCard = ({name, date, title, review}) => {
   </div>
 
   <div
-    className="bg-gray-200  rounded-md w-full h-20 px-2"
+    className="bg-gray-200  rounded-md w-full min-h-20 h-full px-2"
   >
     <p>{review}</p>
   </div>

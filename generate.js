@@ -49,7 +49,7 @@ async function generateSitemap() {
   const blogPosts = await fetchBlogPosts();
   blogPosts.forEach(post => {
     sitemap += `  <url>\n`;
-    sitemap += `    <loc>${DOMAIN}/post/${post.$id}</loc>\n`;
+    sitemap += `    <loc>${DOMAIN}/interpretare-vise/${post.slug}</loc>\n`;
     sitemap += `    <lastmod>${new Date(post.$updatedAt).toISOString()}</lastmod>\n`;
     sitemap += `    <changefreq>monthly</changefreq>\n`;
     sitemap += `    <priority>0.6</priority>\n`;

@@ -12,5 +12,5 @@ h4 {
     @apply font-semibold;
   };
 ol{
-  @apply list-decimal;
+  @apply list-decimal ml-3;
 };

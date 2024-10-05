@@ -27,7 +27,7 @@ export const Featured = ({ url, title }) => {
         {isLoading ? (
           <div className="text-white text-4xl">Loading...</div>
         ) : (
-          <h1 className="text-white font-bold text-7xl md:text-8xl text-center container mx-auto px-6 lg:px-24">{title}</h1>
+          <h1 className="text-white font-bold text-4xl md:text-8xl text-center container mx-auto px-6 lg:px-24">{title}</h1>
 
             // <h1 className="text-white font-bold text-7xl md:text-8xl text-center container mx-auto px-6 lg:px-24 text-stroke-1 text-stroke-black">{title}</h1>
           

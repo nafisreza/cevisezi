@@ -97,8 +97,8 @@ export const Post = () => {
         <aside className="w-full lg:w-1/3 bg-gray-100 p-6">
           <div className="flex flex-col gap-4">
             {/* Sidebar content goes here */}
-            <h2 className="text-xl font-semibold">Sidebar Title</h2>
-            <p>Some additional information or links can go here.</p>
+            <h2 className="text-xl font-semibold text-purple-950">Interpretari pentru tine</h2>
+            <p className="font-semibold">Care ar putea fi urmatoarele tale vise?</p>
             {shuffleArray(posts).slice(0, 3).map((post) => (
               <Link
                 to={`/interpretare-vise/${post?.slug}`}

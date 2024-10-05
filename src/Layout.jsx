@@ -7,7 +7,7 @@ import CookieConsent, { Cookies } from "react-cookie-consent";
 const Layout = ({children}) => {
   return (
     <>
-        {/* <CookieConsent
+        <CookieConsent
   location="bottom"
   buttonText="Sure man!!"
   cookieName="myAwesomeCookieName2"
@@ -17,7 +17,7 @@ const Layout = ({children}) => {
 >
   This website uses cookies to enhance the user experience.{" "}
   <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span>
-</CookieConsent> */}
+</CookieConsent>
         
           <NavBar/>
                   

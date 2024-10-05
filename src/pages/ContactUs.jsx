@@ -9,7 +9,7 @@ export const ContactUs = () => {
 
             <section className='container mx-auto px-6 lg:px-24 py-16 bg-white'>
                 <div className=" px-4 mx-auto pb-10 lg:pb-18 max-w-screen-md">
-                    <h2 className=" text-5xl pb-6 tracking-tight font-extrabold text-center text-gray-900 ">CONTACTEAZA-NE</h2>
+                    <h2 className=" text-4xl pb-6 tracking-tight font-extrabold text-center text-gray-900 ">CONTACTEAZA-NE</h2>
                     <p className=" font-light text-center text-gray-500 sm:text-xl">Pentru orice nelamurire ne poti scrie completand formularul de mai jos. Cu ce te putem ajuta azi?</p>
                 </div>
 

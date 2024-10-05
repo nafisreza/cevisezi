@@ -9,7 +9,7 @@ export const AboutUs = () => {
 
       <section className='container mx-auto px-6 lg:px-24 py-16 bg-white'>
         <div className=" px-4 mx-auto pb-10 lg:pb-18 max-w-screen-md">
-          <h2 className=" text-5xl pb-6 tracking-tight font-extrabold text-center text-gray-900 ">DESPRE NOI</h2>
+          <h2 className=" text-4xl pb-6 tracking-tight font-extrabold text-center text-gray-900 ">DESPRE NOI</h2>
           <p className=" font-light text-center text-gray-500  sm:text-xl">Pentru noi, CeVisezi.ro este o calatorie de descoperire alaturi de fiecare vizitator, explorand lumea bogata și plina de mister a viselor. Ne bucuram de oportunitatea de a oferi claritate, de a aduce confort si de a te ajuta sa te conectezi cu subconstientul tau prin limbajul fascinant al viselor.</p>
         </div>
 

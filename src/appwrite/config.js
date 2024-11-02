@@ -46,13 +46,37 @@ export class Service {
 
     async getPosts(queries = [Query.equal("status", "active")]) {
         try {
-            return await this.databases.listDocuments(
-                conf.appwriteDatabaseID,
-                conf.appwriteCollectionID,
-                queries
-            );
+            let allDocuments = [];
+            let offset = 0;
+            const limit = 100;
+            
+            while (true) {
+                const response = await this.databases.listDocuments(
+                    conf.appwriteDatabaseID,
+                    conf.appwriteCollectionID,
+                    [
+                        ...queries,
+                        Query.limit(limit),
+                        Query.offset(offset)
+                    ]
+                );
+                
+                allDocuments.push(...response.documents);
+                
+                if (response.documents.length < limit) {
+                    break;
+                }
+                
+                offset += limit;
+            }
+            
+            return {
+                documents: allDocuments,
+                total: allDocuments.length
+            };
         } catch (error) {
-            console.log(error)
+            console.log(error);
+            throw error;
         }
     }
     

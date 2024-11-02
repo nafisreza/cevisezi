@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 import service from '../appwrite/config'
 import { Link } from 'react-router-dom'
 import { Featured } from '../components/Featured'
 
 export default function Blogs() {
   const [posts, setPosts] = useState([])
-  const [currentPage, setCurrentPage] = useState(1)
   const [postsPerPage] = useState(12)
+  const navigate = useNavigate()
+  const [searchParams, setSearchParams] = useSearchParams()
+  const [currentPage, setCurrentPage] = useState(()=>{
+    return parseInt(searchParams.get("page") || "1")
+  })
 
   useEffect(() => {
     service.getPosts([]).then((posts) => {
@@ -16,13 +22,23 @@ export default function Blogs() {
     })
   }, [])
 
+  useEffect(() => {
+    setSearchParams({
+      page: currentPage.toString()
+    })
+  }, [currentPage, setSearchParams])
+
+
   // Get current posts for the current page
   const indexOfLastPost = currentPage * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
 
   // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber)
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber)
+    window.scrollTo(0,0)
+  }
 
   if (posts.length === 0) {
     return (

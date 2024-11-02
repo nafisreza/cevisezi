@@ -15,7 +15,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center my-5 px-4">
+      <div className="flex justify-between lg:justify-around items-center my-5 px-4">
         {/* Logo */}
         <Link to="/">
           <img src="/assets/cevisezi-logo.png" alt="Logo" className="h-[60px]" />

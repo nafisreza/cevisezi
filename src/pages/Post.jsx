@@ -102,6 +102,7 @@ export const Post = () => {
             {shuffleArray(posts).slice(0, 3).map((post) => (
               <Link
                 to={`/interpretare-vise/${post?.slug}`}
+                onClick={()=>window.scrollTo(0,0)}
                 key={post?.$id}
                 className="flex flex-col w-full h-[284px] border rounded shadow-lg hover:scale-105 transition-transform duration-1000"
               >

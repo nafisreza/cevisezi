@@ -1,4 +1,4 @@
-## Cevisezi - este o platforma special creata pentru interpretarea si analiza viselor.
+## Cevisezi - platforma special creata pentru interpretarea si analiza viselor.
 ![cevisezi](https://github.com/user-attachments/assets/250c7200-9933-41f1-851a-28870075a483)
 
 ### Technologies:
